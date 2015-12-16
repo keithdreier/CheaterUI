@@ -5,8 +5,5 @@ AutoHotKey script for managing stratagems in HELLDIVERS.
 
 ![alt tag](http://i.imgur.com/zk5OmuJ.png)
 
-1-8 for hotkeys.
-WASD for movement. 
-
 NOTE: Rebind NumPad1-3 to your weapons in HELLDIVERS, then you can trigger those with shift+(1-3) or change the binds in the CheaterUI.ahk
 
