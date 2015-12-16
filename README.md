@@ -1,7 +1,7 @@
 # CheaterUI
 AutoHotKey script for managing stratagems in HELLDIVERS.
 
-When simply scripting your commands isn't lazy enough: create a GUI to manage them for you!
+**When simply scripting your commands isn't lazy enough: create a GUI to manage them for you!**
 
 ![alt tag](http://i.imgur.com/zk5OmuJ.png)
 
