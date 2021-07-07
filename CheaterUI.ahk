@@ -6,7 +6,7 @@ SetWorkingDir %A_ScriptDir%
 ; Settings
 global delay = 30 ; milliseconds between keystrokes
 global keys := ["w","a","s","d"] ; keys used for movement
-global top := 40 ; top of ahk window
+global top := 55 ; top of ahk window
 global size := 50 ; icon size
 global gap = 5 ; icon gap
 SetKeyDelay, %delay%
@@ -17,18 +17,19 @@ WinSet, TransColor, cccccc
 
 global winId := WinExist()
 global skills := Object()
-
-global skillExpanded = False
+global skillExpanded := False
 
 ; Read skill icons and key strokes from file
 ; Key strokes is the file name
-Loop, *.png, 0,1 {
+loop, *.png, 0, 1
+{
   SplitPath, A_LoopFileLongPath, OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive
   skills.Insert({"type": A_LoopFileDir, "code": OutNameNoExt, "image": A_LoopFileFullPath})
 }
 
 ; Render skill slots
-loop 8 {
+loop 8
+{
   num := A_Index
   x := (num - 1) * (size + gap)
   Gui, Add, Picture, gSelectKey vkey%num% x%x% y0 w0 h0,images/blank.png
@@ -136,7 +137,7 @@ RestoreMovement() {
   BlockInput, Off
   For index, value in keys {
     GetKeyState, state, %value%, P
-    if state = D {
+    if (state = D) {
       Send {%value% down}
     }
   }
